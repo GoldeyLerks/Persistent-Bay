@@ -69,7 +69,7 @@
 
 // Closes and locks doors, power check
 /obj/machinery/door_timer/proc/timer_start()
-	if(inoperable())	
+	if(inoperable())
 		return FALSE
 	// Set releasetime
 	releasetime = REALTIMEOFDAY + timetoset
@@ -92,7 +92,7 @@
 
 // Opens and unlocks doors, power check
 /obj/machinery/door_timer/proc/timer_end(var/broadcast_to_huds = 0)
-	if(inoperable())	
+	if(inoperable())
 		return FALSE
 	// Reset releasetime
 	releasetime = 0
@@ -244,7 +244,7 @@
 //Stolen from status_display
 /obj/machinery/door_timer/proc/texticon(var/tn, var/px = 0, var/py = 0)
 	var/image/I = image('icons/obj/status_display.dmi', "blank")
-	var/len = lentext(tn)
+	var/len = length(tn)
 
 	for(var/d = 1 to len)
 		var/char = copytext(tn, len-d+1, len-d+2)

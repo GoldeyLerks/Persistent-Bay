@@ -517,10 +517,6 @@ Turf and target are seperate in case you want to teleport some distance from a t
 /proc/between(var/low, var/middle, var/high)
 	return max(min(middle, high), low)
 
-proc/arctan(x)
-	var/y=arcsin(x/sqrt(1+x*x))
-	return y
-
 //returns random gauss number
 proc/GaussRand(var/sigma)
 	var/x,y,rsq
@@ -915,7 +911,7 @@ var/global/list/common_tools = list(
 			return 3800
 		if(/obj/item/weapon/melee/energy)
 			return 3500
-		if(/obj/item/weapon/blob_tendril) 
+		if(/obj/item/weapon/blob_tendril)
 			if(IsDamageTypeBurn(W.damtype))
 				return 1000
 			else
